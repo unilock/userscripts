@@ -21,7 +21,7 @@ function main() {
 	const legacyButton = document.querySelector('.info-missing-link.h-full.items-center.flex > .top-nav__nav-link')
 	if (legacyButton) {
 		legacyButton.setAttribute('href', 'https://www.curseforge.com' + document.location.pathname)
-		legacyButton.innerHTML = oldButton.innerHTML.replace('Go to the new website', 'New website')
+		legacyButton.innerHTML = legacyButton.innerHTML.replace('Go to the new website', 'New website')
 	}
 
 	// "Go to the new website"
