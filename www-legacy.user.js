@@ -17,18 +17,19 @@
 // ==/UserScript==
 
 function main() {
-	// "Legacy website"
+	// "Go to the new website"
 	const legacyButton = document.querySelector('.info-missing-link.h-full.items-center.flex > .top-nav__nav-link')
 	if (legacyButton) {
 		legacyButton.setAttribute('href', 'https://www.curseforge.com' + document.location.pathname)
-		legacyButton.innerHTML = legacyButton.innerHTML.replace('Go to the new website', 'New website')
+		legacyButton.innerHTML = legacyButton.innerHTML.replace('Go to the new website', 'New Website')
 	}
 
-	// "Go to the new website"
-	const newButton = document.querySelector('.link-btn-icon.btn-primary.link-btn')
+	// "Get CurseForge App"
+	const newButton = document.querySelector('.link-btn.btn-header-cta.download-app-button-header.link-btn-icon')
 	if (newButton) {
+    newButton.onclick = null
 		newButton.setAttribute('href', 'https://legacy.curseforge.com' + document.location.pathname)
-		newButton.children[1].innerHTML = 'Legacy website'
+		newButton.children[1].innerHTML = 'Legacy Website'
 	}
 }
 
