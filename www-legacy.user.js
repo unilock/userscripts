@@ -27,7 +27,6 @@ function main() {
 	// "Get CurseForge App"
 	const newButton = document.querySelector('.link-btn.btn-header-cta.download-app-button-header.link-btn-icon')
 	if (newButton) {
-    newButton.onclick = null
 		newButton.setAttribute('href', 'https://legacy.curseforge.com' + document.location.pathname)
 		newButton.children[1].innerHTML = 'Legacy Website'
 	}
